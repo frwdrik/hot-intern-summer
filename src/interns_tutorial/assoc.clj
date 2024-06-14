@@ -21,4 +21,21 @@
             :address {:street-name
                       "Boulevard of Broken Dreams"
                       :house-number 911}}]
-  (assoc user :name "new name"))
+  ;;(assoc user :name "new name")
+
+  )
+
+;; immutability
+(let [user {:name "bar"}
+      user2 (assoc user :name "bar2")]
+  user)
+
+;; (-> {}
+;;     (assoc :foo :bar)
+;;     (assoc :bar :baz))
+
+;; HashMap e = EmptyHashMap()
+;; e.add(k, v)
+;; e.add(k2, v2)
+;; ...
+;; e
