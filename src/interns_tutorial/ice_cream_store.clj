@@ -22,6 +22,7 @@
 
 (defn have-sufficient-quantity-in-stock?-v2
   [{:keys [name quantity]}]
+  (println name quantity)
   (>= (get ingredients-in-stock name)
       quantity))
 
@@ -39,7 +40,7 @@
     ;; [{:name :pistaccio-nuts, :quantity 20}
     ;;  {:name :milk, :quantity 100}
     ;;  {:name :sugar, :quantity 50}]
-    (every? have-sufficient-quantity-in-stock? recipe)))
+    (every? have-sufficient-quantity-in-stock?-v2 recipe)))
 
 (comment
  (make-ice-cream :pistaccio nil)
